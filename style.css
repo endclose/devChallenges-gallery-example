@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 0.5fr 1fr 40px;
+  justify-items: center;
+}
+.profile {
+  grid-row: 1 / 1;
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person-info {
+  text-align: center;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.profile .person-info .name {
+  margin-bottom: 0.8rem;
+  color: #4e5150;
+}
+.profile .person-info .ubication {
+  color: #a9a9a9;
+}
+.avatar {
+  width: 15rem;
+  border-radius: 1.6rem;
+}
+.stats {
+  display: flex;
+}
+.stat {
+  width: 10rem;
+  height: 6.7rem;
+  background: #e5e5e5;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  margin-right: 2.4rem;
+  text-align: center;
+}
+.stat .number-stat {
+  font-size: 1.8rem;
+}
+.stat .text-stat {
+  color: #bdbdbd;
+  font-size: 1.4rem;
+}
+.gallery {
+  grid-row: 2 / 2;
+  grid-column: 2 / 3;
+  padding: 2.4rem;
+  /* width: 55vw; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5rem 1.5rem;
+  grid-template-areas:
+    "img1 img2 img2"
+    "img3 img3 img4"
+    "img6 img5 img4";
+}
+.gallery > .image {
+  border-radius: 1.2rem;
+  width: 100%;
+  height: 100%;
+}
+.gallery .img-one {
+  grid-area: img1;
+}
+.gallery .img-two {
+  grid-area: img2;
+}
+.gallery .img-three {
+  grid-area: img3;
+}
+.gallery .img-four {
+  grid-area: img4;
+}
+.gallery .img-five {
+  grid-area: img5;
+}
+.gallery .img-six {
+  grid-area: img6;
+}
+
+footer {
+  grid-row: 3 / 4;
+  grid-column: 1 / 4;
+}
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #4e5150;
+}
+@media (max-width: 800px) {
+  .profile {
+    grid-column: 2/3;
+    /* transform: scale(.9); */
+  }
+  .gallery {
+    grid-column: 1/4;
+    /* transform: scale(.9); */
+  }
+}
